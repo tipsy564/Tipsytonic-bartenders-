@@ -1,0 +1,893 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipsy Tonic Bartenders</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #0B0D10;
+            color: #F5F7FA;
+            line-height: 1.6;
+        }
+
+        .navbar {
+            background-color: #121417;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar img {
+            height: 50px;
+        }
+
+        .navbar a {
+            color: #F5B301;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: opacity 0.3s;
+        }
+
+        .navbar a:hover {
+            opacity: 0.8;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 5rem 2rem;
+            background: linear-gradient(135deg, #0B0D10 0%, #1a1d24 100%);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            color: #F5B301;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #A6ABB4;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .section {
+            padding: 4rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            color: #F5B301;
+            margin-bottom: 3rem;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            background: #121417;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .product-info {
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .product-number {
+            font-size: 0.875rem;
+            color: #F5B301;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .product-name {
+            font-size: 1rem;
+            color: #F5F7FA;
+            font-weight: 500;
+        }
+
+        .footer {
+            background-color: #121417;
+            padding: 2rem;
+            text-align: center;
+            color: #A6ABB4;
+            margin-top: 4rem;
+        }
+
+        .footer p {
+            margin: 0.5rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .section h2 {
+                font-size: 2rem;
+            }
+
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .navbar {
+                padding: 1rem;
+            }
+
+            .navbar img {
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <img src="logo.png" alt="Tipsy Tonic Bartenders">
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <section class="hero">
+        <h1>Tipsy Tonic Bartenders</h1>
+        <p>Premium mixology crafted with passion and elegance</p>
+    </section>
+
+    <section class="section">
+        <h2>Mocktails</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="1.1.png" alt="Blackberry Vanilla Mocktail">
+                <div class="product-info">
+                    <div class="product-number">1</div>
+                    <div class="product-name">Blackberry Vanilla Mocktail</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="2.1.png" alt="Virgin Mojito (Nojito)">
+                <div class="product-info">
+                    <div class="product-number">2</div>
+                    <div class="product-name">Virgin Mojito (Nojito)</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="3.1.png" alt="Ginger Cinnamon Apple Cider">
+                <div class="product-info">
+                    <div class="product-number">3</div>
+                    <div class="product-name">Ginger Cinnamon Apple Cider</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="4.1.png" alt="Blue Lagoon">
+                <div class="product-info">
+                    <div class="product-number">4</div>
+                    <div class="product-name">Blue Lagoon</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="5.1.png" alt="Sunset Cooler">
+                <div class="product-info">
+                    <div class="product-number">5</div>
+                    <div class="product-name">Sunset Cooler</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="6.1.png" alt="Minty Lime Fizzy">
+                <div class="product-info">
+                    <div class="product-number">6</div>
+                    <div class="product-name">Minty Lime Fizzy</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="7.1.png" alt="Berry Blast">
+                <div class="product-info">
+                    <div class="product-number">7</div>
+                    <div class="product-name">Berry Blast</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="8.1.png" alt="Tropical Punch">
+                <div class="product-info">
+                    <div class="product-number">8</div>
+                    <div class="product-name">Tropical Punch</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="9.1.png" alt="Citrus Sparkler">
+                <div class="product-info">
+                    <div class="product-number">9</div>
+                    <div class="product-name">Citrus Sparkler</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="10.1.png" alt="Watermelon Splash">
+                <div class="product-info">
+                    <div class="product-number">10</div>
+                    <div class="product-name">Watermelon Splash</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="11.1.png" alt="Pineapple Ginger Fizz">
+                <div class="product-info">
+                    <div class="product-number">11</div>
+                    <div class="product-name">Pineapple Ginger Fizz</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="12.1.png" alt="Strawberry Fresh">
+                <div class="product-info">
+                    <div class="product-number">12</div>
+                    <div class="product-name">Strawberry Fresh</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="13.1.png" alt="Passion Fruit Cooler">
+                <div class="product-info">
+                    <div class="product-number">13</div>
+                    <div class="product-name">Passion Fruit Cooler</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="14.1.png" alt="Orange Blossom Fizz">
+                <div class="product-info">
+                    <div class="product-number">14</div>
+                    <div class="product-name">Orange Blossom Fizz</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="15.1.png" alt="Kiwi Mint Refresher">
+                <div class="product-info">
+                    <div class="product-number">15</div>
+                    <div class="product-name">Kiwi Mint Refresher</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="16.1.png" alt="Cranberry Twist">
+                <div class="product-info">
+                    <div class="product-number">16</div>
+                    <div class="product-name">Cranberry Twist</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="17.1.png" alt="Lemon Iced Spritz">
+                <div class="product-info">
+                    <div class="product-number">17</div>
+                    <div class="product-name">Lemon Iced Spritz</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="18.1.png" alt="Peach Paradise">
+                <div class="product-info">
+                    <div class="product-number">18</div>
+                    <div class="product-name">Peach Paradise</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="19.1.png" alt="Apple Cucumber Cooler">
+                <div class="product-info">
+                    <div class="product-number">19</div>
+                    <div class="product-name">Apple Cucumber Cooler</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="20.1.png" alt="Pomegranate Sparkle">
+                <div class="product-info">
+                    <div class="product-number">20</div>
+                    <div class="product-name">Pomegranate Sparkle</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="21.1.png" alt="Mango Mint Mojito">
+                <div class="product-info">
+                    <div class="product-number">21</div>
+                    <div class="product-name">Mango Mint Mojito</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="22.1.png" alt="Rose Lemonade">
+                <div class="product-info">
+                    <div class="product-number">22</div>
+                    <div class="product-name">Rose Lemonade</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="23.1.png" alt="Virgin Bloody Mary">
+                <div class="product-info">
+                    <div class="product-number">23</div>
+                    <div class="product-name">Virgin Bloody Mary</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="24.1.png" alt="Classic Shirley Temple">
+                <div class="product-info">
+                    <div class="product-number">24</div>
+                    <div class="product-name">Classic Shirley Temple</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="25.1.png" alt="Golden Sunset Spritz">
+                <div class="product-info">
+                    <div class="product-number">25</div>
+                    <div class="product-name">Golden Sunset Spritz</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="26.1.png" alt="Virgin Pina Colada">
+                <div class="product-info">
+                    <div class="product-number">26</div>
+                    <div class="product-name">Virgin Pina Colada</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="27.1.png" alt="Mint Apple Fizz">
+                <div class="product-info">
+                    <div class="product-number">27</div>
+                    <div class="product-name">Mint Apple Fizz</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="28.1.png" alt="Blueberry Cooler">
+                <div class="product-info">
+                    <div class="product-number">28</div>
+                    <div class="product-name">Blueberry Cooler</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="29.1.png" alt="Lemon Mint Refresher">
+                <div class="product-info">
+                    <div class="product-number">29</div>
+                    <div class="product-name">Lemon Mint Refresher</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="30.1.png" alt="Tropical Sunrise">
+                <div class="product-info">
+                    <div class="product-number">30</div>
+                    <div class="product-name">Tropical Sunrise</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="31.1.png" alt="Coconut Lime Cooler">
+                <div class="product-info">
+                    <div class="product-number">31</div>
+                    <div class="product-name">Coconut Lime Cooler</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="32.1.png" alt="Green Apple Splash">
+                <div class="product-info">
+                    <div class="product-number">32</div>
+                    <div class="product-name">Green Apple Splash</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="33.1.png" alt="Strawberry Basil Fizz">
+                <div class="product-info">
+                    <div class="product-number">33</div>
+                    <div class="product-name">Strawberry Basil Fizz</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="34.1.png" alt="Mango Passion Punch">
+                <div class="product-info">
+                    <div class="product-number">34</div>
+                    <div class="product-name">Mango Passion Punch</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="35.1.png" alt="Lychee Rose Cooler">
+                <div class="product-info">
+                    <div class="product-number">35</div>
+                    <div class="product-name">Lychee Rose Cooler</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="36.1.png" alt="Pineapple Mint Sparkle">
+                <div class="product-info">
+                    <div class="product-number">36</div>
+                    <div class="product-name">Pineapple Mint Sparkle</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="37.1.png" alt="Orange Ginger Refresher">
+                <div class="product-info">
+                    <div class="product-number">37</div>
+                    <div class="product-name">Orange Ginger Refresher</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="38.1.png" alt="Blackberry Lemonade">
+                <div class="product-info">
+                    <div class="product-number">38</div>
+                    <div class="product-name">Blackberry Lemonade</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="39.1.png" alt="Peach Iced Tea">
+                <div class="product-info">
+                    <div class="product-number">39</div>
+                    <div class="product-name">Peach Iced Tea</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="40.1.png" alt="Raspberry Spritz">
+                <div class="product-info">
+                    <div class="product-number">40</div>
+                    <div class="product-name">Raspberry Spritz</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="41.1.png" alt="Cucumber Mint Cooler">
+                <div class="product-info">
+                    <div class="product-number">41</div>
+                    <div class="product-name">Cucumber Mint Cooler</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="42.1.png" alt="Cranberry Limeade">
+                <div class="product-info">
+                    <div class="product-number">42</div>
+                    <div class="product-name">Cranberry Limeade</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="43.1.png" alt="Honey Lemon Fizz">
+                <div class="product-info">
+                    <div class="product-number">43</div>
+                    <div class="product-name">Honey Lemon Fizz</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="44.1.png" alt="Kiwi Strawberry Cooler">
+                <div class="product-info">
+                    <div class="product-number">44</div>
+                    <div class="product-name">Kiwi Strawberry Cooler</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="45.1.png" alt="Apple Cinnamon Fizz">
+                <div class="product-info">
+                    <div class="product-number">45</div>
+                    <div class="product-name">Apple Cinnamon Fizz</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="46.1.png" alt="Watermelon Mint Splash">
+                <div class="product-info">
+                    <div class="product-number">46</div>
+                    <div class="product-name">Watermelon Mint Splash</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="47.1.png" alt="Passion Citrus Cooler">
+                <div class="product-info">
+                    <div class="product-number">47</div>
+                    <div class="product-name">Passion Citrus Cooler</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="48.1.png" alt="Guava Sparkler">
+                <div class="product-info">
+                    <div class="product-number">48</div>
+                    <div class="product-name">Guava Sparkler</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="49.1.png" alt="Blood Orange Cooler">
+                <div class="product-info">
+                    <div class="product-number">49</div>
+                    <div class="product-name">Blood Orange Cooler</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="50.1.png" alt="Lemon Ginger Iced Tea">
+                <div class="product-info">
+                    <div class="product-number">50</div>
+                    <div class="product-name">Lemon Ginger Iced Tea</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Cocktails</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="1.2.png" alt="Mojito">
+                <div class="product-info">
+                    <div class="product-number">1</div>
+                    <div class="product-name">Mojito</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="2.2.png" alt="Martini">
+                <div class="product-info">
+                    <div class="product-number">2</div>
+                    <div class="product-name">Martini</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="3.2.png" alt="Margarita">
+                <div class="product-info">
+                    <div class="product-number">3</div>
+                    <div class="product-name">Margarita</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="4.2.png" alt="Old Fashioned">
+                <div class="product-info">
+                    <div class="product-number">4</div>
+                    <div class="product-name">Old Fashioned</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="5.2.png" alt="Whiskey Sour">
+                <div class="product-info">
+                    <div class="product-number">5</div>
+                    <div class="product-name">Whiskey Sour</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="6.2.png" alt="Cosmopolitan">
+                <div class="product-info">
+                    <div class="product-number">6</div>
+                    <div class="product-name">Cosmopolitan</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="7.2.png" alt="Negroni">
+                <div class="product-info">
+                    <div class="product-number">7</div>
+                    <div class="product-name">Negroni</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="8.2.png" alt="Daiquiri">
+                <div class="product-info">
+                    <div class="product-number">8</div>
+                    <div class="product-name">Daiquiri</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="9.2.png" alt="Long Island Iced Tea">
+                <div class="product-info">
+                    <div class="product-number">9</div>
+                    <div class="product-name">Long Island Iced Tea</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="10.2.png" alt="Bloody Mary">
+                <div class="product-info">
+                    <div class="product-number">10</div>
+                    <div class="product-name">Bloody Mary</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="11.2.png" alt="Manhattan">
+                <div class="product-info">
+                    <div class="product-number">11</div>
+                    <div class="product-name">Manhattan</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="12.2.png" alt="Mai Tai">
+                <div class="product-info">
+                    <div class="product-number">12</div>
+                    <div class="product-name">Mai Tai</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="13.2.png" alt="Piña Colada">
+                <div class="product-info">
+                    <div class="product-number">13</div>
+                    <div class="product-name">Piña Colada</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="14.2.png" alt="Tequila Sunrise">
+                <div class="product-info">
+                    <div class="product-number">14</div>
+                    <div class="product-name">Tequila Sunrise</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="15.2.png" alt="Moscow Mule">
+                <div class="product-info">
+                    <div class="product-number">15</div>
+                    <div class="product-name">Moscow Mule</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="16.2.png" alt="Gin & Tonic">
+                <div class="product-info">
+                    <div class="product-number">16</div>
+                    <div class="product-name">Gin & Tonic</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="17.2.png" alt="Screwdriver">
+                <div class="product-info">
+                    <div class="product-number">17</div>
+                    <div class="product-name">Screwdriver</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="18.2.png" alt="Sex on the Beach">
+                <div class="product-info">
+                    <div class="product-number">18</div>
+                    <div class="product-name">Sex on the Beach</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="19.2.png" alt="Dark 'n' Stormy">
+                <div class="product-info">
+                    <div class="product-number">19</div>
+                    <div class="product-name">Dark 'n' Stormy</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="20.2.png" alt="Tom Collins">
+                <div class="product-info">
+                    <div class="product-number">20</div>
+                    <div class="product-name">Tom Collins</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="21.2.png" alt="Aperol Spritz">
+                <div class="product-info">
+                    <div class="product-number">21</div>
+                    <div class="product-name">Aperol Spritz</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="22.2.png" alt="Caipirinha">
+                <div class="product-info">
+                    <div class="product-number">22</div>
+                    <div class="product-name">Caipirinha</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="23.2.png" alt="Paloma">
+                <div class="product-info">
+                    <div class="product-number">23</div>
+                    <div class="product-name">Paloma</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="24.2.png" alt="Bellini">
+                <div class="product-info">
+                    <div class="product-number">24</div>
+                    <div class="product-name">Bellini</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="25.2.png" alt="Blue Lagoon">
+                <div class="product-info">
+                    <div class="product-number">25</div>
+                    <div class="product-name">Blue Lagoon</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="26.2.png" alt="French 75">
+                <div class="product-info">
+                    <div class="product-number">26</div>
+                    <div class="product-name">French 75</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="27.2.png" alt="Clover Club">
+                <div class="product-info">
+                    <div class="product-number">27</div>
+                    <div class="product-name">Clover Club</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="28.2.png" alt="Sazerac">
+                <div class="product-info">
+                    <div class="product-number">28</div>
+                    <div class="product-name">Sazerac</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="29.2.png" alt="Boulevardier">
+                <div class="product-info">
+                    <div class="product-number">29</div>
+                    <div class="product-name">Boulevardier</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="30.2.png" alt="Mint Julep">
+                <div class="product-info">
+                    <div class="product-number">30</div>
+                    <div class="product-name">Mint Julep</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="31.2.png" alt="Vesper Martini">
+                <div class="product-info">
+                    <div class="product-```html
+number">31</div>
+                    <div class="product-name">Vesper Martini</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="32.2.png" alt="Sidecar">
+                <div class="product-info">
+                    <div class="product-number">32</div>
+                    <div class="product-name">Sidecar</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="33.2.png" alt="Aviation">
+                <div class="product-info">
+                    <div class="product-number">33</div>
+                    <div class="product-name">Aviation</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="34.2.png" alt="White Russian">
+                <div class="product-info">
+                    <div class="product-number">34</div>
+                    <div class="product-name">White Russian</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="35.2.png" alt="Black Russian">
+                <div class="product-info">
+                    <div class="product-number">35</div>
+                    <div class="product-name">Black Russian</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="36.2.png" alt="Irish Coffee">
+                <div class="product-info">
+                    <div class="product-number">36</div>
+                    <div class="product-name">Irish Coffee</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="37.2.png" alt="Amaretto Sour">
+                <div class="product-info">
+                    <div class="product-number">37</div>
+                    <div class="product-name">Amaretto Sour</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="38.2.png" alt="Bramble">
+                <div class="product-info">
+                    <div class="product-number">38</div>
+                    <div class="product-name">Bramble</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="39.2.png" alt="French Martini">
+                <div class="product-info">
+                    <div class="product-number">39</div>
+                    <div class="product-name">French Martini</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="40.2.png" alt="Espresso Martini">
+                <div class="product-info">
+                    <div class="product-number">40</div>
+                    <div class="product-name">Espresso Martini</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="41.2.png" alt="Cuba Libre">
+                <div class="product-info">
+                    <div class="product-number">41</div>
+                    <div class="product-name">Cuba Libre</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="42.2.png" alt="Harvey Wallbanger">
+                <div class="product-info">
+                    <div class="product-number">42</div>
+                    <div class="product-name">Harvey Wallbanger</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="43.2.png" alt="Sea Breeze">
+                <div class="product-info">
+                    <div class="product-number">43</div>
+                    <div class="product-name">Sea Breeze</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="44.2.png" alt="Bay Breeze">
+                <div class="product-info">
+                    <div class="product-number">44</div>
+                    <div class="product-name">Bay Breeze</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="45.2.png" alt="Greyhound">
+                <div class="product-info">
+                    <div class="product-number">45</div>
+                    <div class="product-name">Greyhound</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="46.2.png" alt="Salty Dog">
+                <div class="product-info">
+                    <div class="product-number">46</div>
+                    <div class="product-name">Salty Dog</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="47.2.png" alt="Zombie">
+                <div class="product-info">
+                    <div class="product-number">47</div>
+                    <div class="product-name">Zombie</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="48.2.png" alt="Hurricane">
+                <div class="product-info">
+                    <div class="product-number">48</div>
+                    <div class="product-name">Hurricane</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="49.2.png" alt="Singapore Sling">
+                <div class="product-info">
+                    <div class="product-number">49</div>
+                    <div class="product-name">Singapore Sling</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="50.2.png" alt="Planter's Punch">
+                <div class="product-info">
+                    <div class="product-number">50</div>
+                    <div class="product-name">Planter's Punch</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Tipsy Tonic Bartenders. All rights reserved.</p>
+        <p>Website designed by ECHOX</p>
+    </footer>
+</body>
+</html>
