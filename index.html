@@ -84,11 +84,23 @@ function processCommand(command) {
     return getDay();
   }
 
-  // Identity
-  if (cmd.includes("who are you") || cmd.includes("your name")) {
-    return "I am Mira, your mobile voice assistant, Sir.";
-  }
-
+  // Identity (sweet & varied answers)
+if (
+  cmd.includes("who are you") ||
+  cmd.includes("your name") ||
+  cmd.includes("who created you") ||
+  cmd.includes("who made you") ||
+  cmd.includes("who built you")
+) {
+  const replies = [
+    "I’m Mira, your assistant.",
+    "You created me, Sir.",
+    "I was made by you.",
+    "I’m your personal AI.",
+    "I exist to help you, Sir."
+  ];
+  return replies[Math.floor(Math.random() * replies.length)];
+}
   if (cmd.includes("help")) {
     return "I can tell time, date, open websites, search Google, flip a coin, and roll a dice.";
   }
